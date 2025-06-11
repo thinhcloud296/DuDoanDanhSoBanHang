@@ -37,8 +37,7 @@ if uploaded_file is not None:
             original = scaler.inverse_transform(inverse_input)
             original_sales = original[0][0]
 
-            st.success(f"🔮 Dự đoán doanh số (chuẩn hóa): {pred[0][0]:,.4f}")
-            st.success(f"💰 Doanh số thực tế ước tính: {original_sales:,.2f} đơn vị")
+            st.success(f"💰 Doanh số thực tế ước tính: {original_sales:,.2f} $")
 
     except Exception as e:
         st.error(f"⚠️ Lỗi khi xử lý file: {str(e)}")
